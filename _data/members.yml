@@ -1,0 +1,29 @@
+- id: devin
+  name: Devin Çeşmecioğlu
+  short-bio: Mimar Sinan Üniversitesi Fizik Bölümü
+  long-bio: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo saepe minima nam, doloremque quasi dolorum nulla neque qui dignissimos, molestiae rem voluptatibus molestias assumenda, recusandae accusamus fugiat soluta repudiandae maxime corporis! Ea debitis minima laudantium odio id, a culpa repellat!
+  image: devin.png
+
+- id: cem
+  name: Cem Eröncel
+  short-bio: Syracuse Üniversitesi Fizik Bölümü
+  long-bio: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo saepe minima nam, doloremque quasi dolorum nulla neque qui dignissimos, molestiae rem voluptatibus molestias assumenda, recusandae accusamus fugiat soluta repudiandae maxime corporis! Ea debitis minima laudantium odio id, a culpa repellat!
+  image: cem.jpg
+
+- id: eda
+  name: Eda Kılınçarslan
+  short-bio: Mimar Sinan Üniversitesi Fizik Bölümü
+  long-bio: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo saepe minima nam, doloremque quasi dolorum nulla neque qui dignissimos, molestiae rem voluptatibus molestias assumenda, recusandae accusamus fugiat soluta repudiandae maxime corporis! Ea debitis minima laudantium odio id, a culpa repellat!
+  image: eda.jpg
+
+- id: ceyhun
+  name: Ceyhun Andaç
+  short-bio: İstanbul Teknik Üniversitesi Fizik Bölümü
+  long-bio: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo saepe minima nam, doloremque quasi dolorum nulla neque qui dignissimos, molestiae rem voluptatibus molestias assumenda, recusandae accusamus fugiat soluta repudiandae maxime corporis! Ea debitis minima laudantium odio id, a culpa repellat!
+  image: ceyhun.jpg
+
+- id: cicek
+  name: Cihan Çiçek
+  short-bio: Boğaziçi Üniversitesi Fizik Bölümü
+  long-bio: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo saepe minima nam, doloremque quasi dolorum nulla neque qui dignissimos, molestiae rem voluptatibus molestias assumenda, recusandae accusamus fugiat soluta repudiandae maxime corporis! Ea debitis minima laudantium odio id, a culpa repellat!
+  image: ks.png

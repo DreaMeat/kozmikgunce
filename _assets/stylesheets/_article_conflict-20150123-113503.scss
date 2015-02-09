@@ -132,7 +132,7 @@ article {
 
     .meta {
         color:$textmuted;
-        font-size:13px;
+        font-size:2.0em;
         // text-transform:uppercase;
         margin-bottom:0.3em;
         font-weight:400;
@@ -140,26 +140,7 @@ article {
 
         time, address {
             display:inline;
-            font-size:1.4em;
-        }
-
-        a {
-            border:0;
-            color:$textmuted;
-        }
-    }
-
-    .meta-above {
-        color:$textmuted;
-        font-size:13px;
-        // text-transform:uppercase;
-        margin-bottom:0.5em;
-        font-weight:400;
-        letter-spacing:1px;
-
-        time, address {
-            display:inline;
-            font-size:1.4em;
+            font-size:13px;
         }
 
         a {

@@ -14,6 +14,7 @@ layout: base
             {% if site.inc.facebook %}
             <a href="http://facebook.com/{{ site.inc.facebook }}" title="Like on Facebook" target="_blank"><i class="icon icon-facebook"></i></a>
             {% endif %}
+            <a href="https://plus.google.com/101616594381374522087" title="Google Plus Sayfası" target="_blank" rel="publisher"><i class="icon icon-googleplus"></i></a>
             <a href="/feed.xml" title="RSS Feed">
                 <i class="icon icon-rss"></i>
             </a>
@@ -26,13 +27,20 @@ layout: base
 {% for post in paginator.posts %}
   {% unless post.draft %}
     <section class="index">
-        <!-- {% if post.author.image %}<img src="/images/{{ post.author.image }}" class="avatar">{% endif %}-->
+         <!-- {% if post.author.image %}<img src="/images/{{ post.author.image }}" class="avatar">{% endif %} -->
         <div>
             <h2 class="title"><a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h2>
-            <p>{{ post.excerpt }}</p>
-            <div class="meta">
+            <div class="meta-above">
                 <address>{{ post.author.name }}</address> &mdash;
-                <time pubdate datetime="{{ post.date | date: "%Y-%d-%B" }}" title="{{ post.date | date: "%B %d, %Y" }}">{{ post.date | localize: "%d.%m.%Y" }}</time>
+                <time pubdate datetime="{{ post.date | localize: "%d.%m.%Y" }}" title="{{ post.date | localize: "%d.%m.%Y" }}">{{ post.date | localize: "%d.%m.%Y" }}</time>
+            </div>
+            <p>{{ post.excerpt }}&nbsp;<a href="{{ post.url }}" rel="prefetch">Devamı ...</a></p>
+            <div class="meta">
+                <address><strong>Etiketler:</strong>
+                    {% for tag in post.categories %}
+                        {{ tag }}&nbsp;
+                    {% endfor %}
+                </address>
             </div>
         </div>
         <hr>

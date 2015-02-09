@@ -3,7 +3,7 @@ layout: post
 
 title: "Yıldızlararası"
 #subtitle: 
-cover_image: blog-cover.jpg
+#cover_image: blog-cover.jpg
 
 excerpt: "Yıldızlararası, 7 Kasım 2014'te gösterime giren bir bilimkurgu filmi; yönetmeni ise Memento, Prestij, son Batman serisi ve Inception filmleriyle tanınan Christopher Nolan. Filmin bilimsel tutarlılık konusunda çok iddialı olması ve yapımında kütleçekimi hakkında en bilgili kişilerden Kip Thorne'nin rol alması, epey ses getirmesini sağlarken izleyici kitlesini de biraz sınırlamış oldu."
 
@@ -12,7 +12,10 @@ author:
   bio: Mimar Sinan Üniversitesi Fizik Bölümü
   image: devin.png
 
-tags: []
+categories:
+  - jekyll
+  - blog
+  - ruby
 ---
 [Yıldızlararası](http://www.imdb.com/title/tt0816692/), 7 Kasım 2014'te gösterime giren bir bilimkurgu filmi; yönetmeni ise Memento, Prestij, son Batman serisi ve Inception filmleriyle tanınan Christopher Nolan. Filmin bilimsel tutarlılık konusunda çok iddialı olması ve yapımında kütleçekimi hakkında en bilgili kişilerden Kip Thorne'nin rol alması, epey ses getirmesini sağlarken izleyici kitlesini de biraz sınırlamış oldu.
 

@@ -26,7 +26,8 @@
     <meta property="og:description" content="{{ page.excerpt }}"/>
     <meta name="description" content="{{ page.excerpt }}"/>
     {% endif %}
-    <meta property="og:site_name" content="{{ site.inc.title }}">     
+    <meta property="og:site_name" content="{{ site.inc.title }}">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">   
 </head>
 <body>
     
@@ -36,14 +37,10 @@
             <a class="brand" href="/">
                 <img src="/images/{{ site.inc.logo }}" alt="Inc">
             </a>
-            <a href="/" class="home">Blog</a>
-            {% if site.inc.product_link %}<a href="{{ site.inc.product_link }}">Product</a>{% endif %}
-            {% if site.inc.about_link %}<a href="{{ site.inc.about_link }}">About</a>{% endif %}
+            {% for element in site.data.navigation %}
+                <a href="{{ element.link }}">{{ element.name }}</a>
+            {% endfor %}
         </nav>
-        {% if site.inc.tagline or site.inc.product_url %}<nav class="tagline">
-            {% if site.inc.tagline %}<span>{{ site.inc.tagline }}</span>{% endif %}
-            {% if site.inc.product_link %}<a href="{{ site.inc.product_link }}" class="btn btn-outline">Learn More</a>{% endif %}
-        </nav>{% endif %}
     </header>
 </section>
 
@@ -55,9 +52,10 @@
         
         <nav>
             <a href="{{ site.inc.url }}">{{ site.inc.company }}</a> &middot;
-            <a href="/">Blog</a> &middot;
-            {% if site.inc.product_link %}<a href="{{ site.inc.product_link }}">Product</a> &middot; {% endif %}
-            {% if site.inc.about_link %}<a href="{{ site.inc.about_link }}">About</a>{% endif %}
+            {% for element in site.data.navigation %}
+                <a href="{{ element.link }}">{{ element.name }}</a>
+                {% unless forloop.rindex0 == 0 %}&middot;{% endunless %}
+            {% endfor %}
         </nav>
         
         <nav class="social">
@@ -71,7 +69,8 @@
                 <i class="icon icon-rss black"></i>
             </a>
         </nav>
-        <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+        <p>Fotoğraf: <a href="http://hubblesite.org/newscenter/archive/releases/2015/02" target="_blank">Andromeda Galaksi'sinin Yüksek Çözünürlülüklü panoromik Hubble görüntüsü</a></p>
+        <p>Blog Teması: Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
     </div>
 </footer>
 

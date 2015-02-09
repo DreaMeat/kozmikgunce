@@ -10,9 +10,9 @@ inc:
   url:          http://kozmikgunce.com
   facebook:     kozmikgunce
   twitter:      kozmikgunce
-  #gplus:        '101183822199340201470'
-  about_link:   http://kozmikgunce.com/hakkimizda
-  
+  gplus:        '101616594381374522087'
+  #<a href="https://plus.google.com/101616594381374522087" rel="publisher">Google+</a>
+ 
   # Product Information
   #product_link: http://incorporated.sendtoinc.com/
   #tagline:      "Get a modern blog for your company"
@@ -37,7 +37,7 @@ inc:
       
   # Google Fonts
   # eg. 'Droid+Sans:400,700|Droid+Serif:400,700'
-  google_font: 'Droid+Sans:400,700'
+  google_font: 'Noto+Sans:400,700'
   
   # Setup your fonts, colors etc at _assets/stylesheets/main.scss
 

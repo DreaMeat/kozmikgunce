@@ -1,15 +1,18 @@
 /* CONFIGURATION */
 
 /* Bodytext font */
-$font: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 /* Font for headings */
-$fontheadings: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontheadings: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 /* Text colors */
-$text: #21272d;
-$textmuted: #848484;
-$accent: #2077b2;
+// $text: #21272d;
+$text: #2c3e50; // Midnight Blue
+// $textmuted: #848484;
+// $accent: #2077b2;
+$textmuted: #7f8c8d; // Asbestos
+$accent: #8e44ad; // Wisteria
 
 
 /* IMPORT CSS FILES */
