@@ -1,44 +1,41 @@
 ---
-layout: base
+layout: default
 ---
-{% if page.cover_image %}
-<div class="article-cover">
-    <div>
-        <img src="/images/{{ page.cover_image }}" class="image">
-    </div>
-</div>
-{% endif %}
-<article>
-
-    <div class="container">
-        <header>
-            <div class="meta">
-                <address><a rel="author" href="{{ page.author.link }}" title="{{ page.author.name }}" target="_blank">{{ page.author.name }}</a></address> &mdash;
-                <time pubdate datetime="{{ page.date | date: "%Y-%d-%B" }}" title="{{ page.date | date: "%B %d, %Y" }}">{{ page.date | localize: "%d.%m.%Y" }}</time>
+          <article>
+            <header>
+              <div class="post-title">
+                <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
+              </div>
+              <div class="post-meta">
+                {% assign author = site.data.members[page.author] %}
+                <p><span class="post-date"><time pubdate datetime="{{ page.date | date: "%-d %B %Y" }}" title="{{ page.date | date: "%-d %B %Y" }}">{{ page.date | date: "%-d %B %Y" }}</time></span>|<span class="post-author">{{ author.name }}</span>|<span class="post-labels">
+                  {% assign tags_list = page.tags %} 
+                  {% for tag in tags_list %}{{ tag }}{% unless forloop.rindex0 == 0 %}&nbsp;&middot;&nbsp;{% endunless %}{% endfor %}
+                </span></p>
+              </div>
+            </header>
+            <div class="post-content">
+              <div class="row">
+                <div class="col-sm-12 post-content">
+                  {{ content }}
+                </div>
+              </div>
             </div>
-            <h1 class="title">{{ page.title }}</h1>
-            {% if page.subtitle %}<h2 class="subtitle">{{ page.subtitle }}</h2>{% endif %}
-        </header>
-
-        <section>
-            {{ content }}
-            {% include _social.html %}
-        </section>
-
-        <footer>
-            <address>
-               {% if page.author.image %}<img src="/images/{{ page.author.image }}">{% endif %}
-                <p><strong><a rel="author" href="https://twitter.com/{{ page.author.twitter }}" title="{{ page.author_name }}" target="_blank">{{ page.author.name }}</a></strong><br>
-                <span class="muted">{{ page.author.bio }}</span>
-                </p>
-            </address>
-
-        </footer>
-
-        {% if site.inc.disqus.shortname %}
-        <section>
-            {% include _disqus.html %}
-        </section>
-        {% endif %}
-    </div>
-</article>
+          </article>
+          <hr>
+            <div class="post-footer">
+              <div class="row">
+                <div class="col-sm-12">
+                  <nav>
+                    <ul class="pager">
+                      {% if page.previous %}
+                      <li><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr;Önceki</a></li>
+                      {% endif %}
+                      {% if page.next %}
+                      <li><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Sonraki&rarr;</a></li>
+                      {% endif %}
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>

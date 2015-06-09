@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          {{ content }}
+        </div>
+        <div class="col-sm-4">
+        <aside>
+          <div class="aside-search">
+            <form action="">
+              <div class="left-inner-addon">
+                <i class="fa fa-search"></i>
+                <input type="text" class="form-control" placeholder="Arama">
+              </div>
+            </form>
+          </div>
+          <hr>
+          <div class="aside-posts">
+            <div role="tabpanel">
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#recent" aria-controls="recent" role="tab" data-toggle="tab">En son eklenenler</a></li>
+                <li role="presentation"><a href="#popular" aria-controls="popular" role="tab" data-toggle="tab">En popüler yazılar</a></li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="recent">
+                  <ul class="list-unstyled">
+                  {% for post in site.posts %}
+                    <li>
+                      <div>
+                        <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+                        {% assign author = site.data.members[post.author] %}
+                        <p>{{ post.date | date: "%-d.%m.%Y" }} &middot; {{ author.name }}</p>
+                      </div>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                 </div>
+                <div role="tabpanel" class="tab-pane fade" id="popular">
+                  Popular articles
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <hr>
+          <div class="aside-labels">
+            <h3>Etiketler</h3>
+            <ul class="list-inline">
+              <li>
+                <a href="#">kozmoloji</a>
+              </li>
+              <li>
+                <a href="#">popüler bilim</a>
+              </li>
+              <li>
+                <a href="#">parçacık fiziği</a>
+              </li>
+              <li>
+                <a href="#">eğitim</a>
+              </li>
+              <li>
+                <a href="#">geometri</a>
+              </li>
+            </ul>
+          </div>
+          <hr>
+          <div class="aside-links">
+            <h3>Bağlantılar</h3>
+            <ul class="list-unstyled">
+              <li>
+                <a href="">IAPS İstanbul</a>
+              </li>
+              <li>
+                <a href="">İTÜ Fizik Haftası</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </aside>
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

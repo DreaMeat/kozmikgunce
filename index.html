@@ -1,62 +1,29 @@
 ---
-layout: base
+layout: default
 ---
-<div class="blog-cover" style="background-image:url(/images/{{ site.inc.cover_image }});">
-    
-    <section>
-        <div class="container">
-            <h1>{{ site.inc.title }}</h1>
-            {% if site.inc.subtitle %}<h3>{{ site.inc.subtitle }}</h3>{% endif %}
-        
-            {% if site.inc.twitter %}
-            <a href="https://twitter.com/{{ site.inc.twitter }}" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter"></i></a>
-            {% endif %}
-            {% if site.inc.facebook %}
-            <a href="http://facebook.com/{{ site.inc.facebook }}" title="Like on Facebook" target="_blank"><i class="icon icon-facebook"></i></a>
-            {% endif %}
-            <a href="https://plus.google.com/101616594381374522087" title="Google Plus Sayfası" target="_blank" rel="publisher"><i class="icon icon-googleplus"></i></a>
-            <a href="/feed.xml" title="RSS Feed">
-                <i class="icon icon-rss"></i>
-            </a>
-        </div>
-    </section>
-</div>
 
-
-<article class="container">
-{% for post in paginator.posts %}
-  {% unless post.draft %}
-    <section class="index">
-         <!-- {% if post.author.image %}<img src="/images/{{ post.author.image }}" class="avatar">{% endif %} -->
-        <div>
-            <h2 class="title"><a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h2>
-            <div class="meta-above">
-                <address>{{ post.author.name }}</address> &mdash;
-                <time pubdate datetime="{{ post.date | localize: "%d.%m.%Y" }}" title="{{ post.date | localize: "%d.%m.%Y" }}">{{ post.date | localize: "%d.%m.%Y" }}</time>
-            </div>
-            <p>{{ post.excerpt }}&nbsp;<a href="{{ post.url }}" rel="prefetch">Devamı ...</a></p>
-            <div class="meta">
-                <address><strong>Etiketler:</strong>
-                    {% for tag in post.categories %}
-                        {{ tag }}&nbsp;
-                    {% endfor %}
-                </address>
-            </div>
-        </div>
-        <hr>
-    </section>
-    {% endunless %}
-    {% endfor %}
-    <section class="pagination" style="text-align:center">
-      {% if paginator.previous_page %}
-        {% if paginator.previous_page == 1 %}
-        <a href="/" class="btn btn-outline">‹ Newer</a>
-        {% else %}
-        <a href="/page{{ paginator.previous_page }}" class="btn btn-outline">‹ Newer</a>
-        {% endif %}
-      {% endif %}
-      {% if paginator.next_page %}
-        <a href="/page{{ paginator.next_page }}" class="btn btn-outline">Older ›</a>
-      {% endif %}
-    </section>
+{% for post in site.posts %}
+<article>
+  <header>
+    <div class="post-title">
+      <h1>{{ post.title }}</h1>
+    </div>
+    {% assign author = site.data.members[post.author] %}
+    <p><span class="post-date"><time pubdate datetime="{{ post.date | date: "%-d %B %Y" }}" title="{{ post.date | date: "%-d %B %Y" }}">{{ post.date | date: "%-d %B %Y" }}</time></span>|<span class="post-author">{{ author.name }}</span>|<span class="post-labels">
+                  {% assign tags_list = post.tags %} 
+                  {% for tag in tags_list %}{{ tag }}{% unless forloop.rindex0 == 0 %}&nbsp;&middot;&nbsp;{% endunless %}{% endfor %}
+                </span></p>
+  </header>
+  <div class="post-content">
+    <div class="row">
+      <div class="col-sm-12 post-content">
+        <p>{{ post.excerpt}}</p>
+        <a href="{{ post.url }}"><button type="button" class="btn btn-default btn-sm"><span class="continue-reading">Devamı</span></button></a>
+      </div>
+    </div>
+  </div>
 </article>
+{% unless forloop.rindex0 == 0 %}
+  <hr>
+{% endunless %}
+{% endfor %}

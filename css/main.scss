@@ -1,0 +1,195 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+		"variables",
+        "bootstrap",
+		"bootswatch";
+
+
+//======================= Header Styles ===============================//
+
+.cover-image{
+	background-image: url('{{ site.baseurl }}/assets/site/cover.jpg');
+	background-size: cover;
+	height:320px;
+	margin-bottom: 2.5em;
+
+	section{
+		text-align: center;
+		position: relative;
+		left:0;
+		right:0;
+		top:0;
+		bottom:0;
+		padding:100px 0;
+	}
+
+	h1, h3{
+		color: #fff;
+		font-weight: 700;
+	}
+
+	h1{
+		font-size:3em;
+	}
+
+	h3{
+		font-size:2em;
+	}
+}
+
+//======================== Main Styles =============================//
+
+/* Post metadata styles */
+
+h1{
+	margin-top: 0em;
+}
+
+span.post-date:before {
+	content: "\f133"; /*calendar-o*/
+	font-family: FontAwesome;
+	margin-right: 0.4em;
+	color: #00B6AD;
+}
+
+span.post-author:before {
+	content: "\f007"; /*user*/
+	font-family: FontAwesome;
+	margin-right: 0.4em;
+	color: #00B6AD;
+}
+
+span.post-labels:before {
+	content: "\f02c"; /*tags*/
+	font-family: FontAwesome;
+	margin-right: 0.4em;
+	color: #00B6AD;
+}
+
+span.post-date{
+	margin-right: 0.5em;
+	color: #7f8c8d;
+}
+
+span.post-author{
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	color: #7f8c8d;
+}
+
+span.post-labels{
+	margin-left: 0.5em;
+	color: #7f8c8d;
+}
+
+span.continue-reading:after{
+	content: "\f101"; /*calendar-o*/
+	font-family: FontAwesome;
+	margin-left: 0.4em;
+}
+
+hr{
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+//================ Aside Styles ======================/
+
+/* Styles for search box : Change to em units */
+.left-inner-addon {
+    position: relative;
+}
+.left-inner-addon input {
+    padding-left: 35px;    
+}
+.left-inner-addon i {
+    position: absolute;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+
+/* Recent and Popular Posts */
+.aside-posts ul.list-unstyled{
+	padding-top:0.5em;
+	padding-left: 0.5em;
+}
+
+.aside-posts .list-unstyled li{
+	padding-top: 0.5em;
+}
+
+/* Labels */
+.aside-labels ul.list-inline{
+	padding-top:0.5em;
+	padding-left: 0.5em;
+}
+
+/* Links */
+.aside-links ul.list-unstyled{
+	padding-top:0.5em;
+	padding-left: 0.5em;
+}
+
+.aside-links .list-unstyled li{
+	padding-bottom: 0.5em;
+}
+
+//================ Footer Styles ====================/
+
+.social-media{
+	list-style: none;
+	text-align: center;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.social-media li{
+	position: relative;
+	display: inline-block;
+}
+
+.social-media a{
+	display: block;
+	margin-left: 18px;
+	width:64px;
+	height:64px;
+	position: relative;
+	text-align: center;
+	line-height: 64px;
+	border-radius: 50%;
+	border: 2px solid #7f8c8d;
+	font-size: 18px;
+	-webkit-transition: background 1s, color 1s,-webkit-transform 1s;  /* For Safari 3.1 to 6.0 */
+  	transition: background 1s, color 1s, transform 1s;
+
+}
+
+.facebook:hover {
+  background-color: #3b5998; /* Facebook color */
+  color:#ecf0f1;
+}
+
+.twitter:hover {
+  background-color: #4099FF; /* Twitter color */
+  color:#ecf0f1;
+}
+
+.google-plus:hover {
+  background-color: #d34836; /* Google-Plus color */
+  color:#ecf0f1;
+}
+
+.rss:hover {
+	background-color: #ee802f; /* RSS color */
+	color:#ecf0f1;
+}
+
+.signature{
+	text-align: center;
+	margin-bottom: 2em;
+}
