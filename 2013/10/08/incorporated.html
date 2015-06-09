@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Jekyll Incorporated Features</title>
+  <meta name="description" content="Incorporated provides a great typography, responsive design, author details, semantic markup and more.">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://kozmikgunce.com/2013/10/08/incorporated.html">
+  <link rel="alternate" type="application/rss+xml" title="Kozmik Günce" href="http://kozmikgunce.com/feed.xml" />
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+</head>
+
+
+
+
+  <body>
+
+    <header>
+<div class="container">
+  <div class="row">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/nedir">Blog Hakkında</a></li>
+            <li><a href="/yazarlar">Arşiv</a></li>
+            <li><a href="/iletisim">İletişim</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="row">
+    <div class="cover-image">
+      <section>
+        <h1>Kozmik Günce</h1>
+        <h3>Yaşam, evren ve diğer herşey ile ilgili bir blog</h3>
+      </section>
+    </div>
+  </div>
+</div>
+</header>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+                    <article>
+            <header>
+              <div class="post-title">
+                <h1>Jekyll Incorporated Features </h1>
+              </div>
+              <div class="post-meta">
+                
+                <p><span class="post-date"><time pubdate datetime="8 October 2013" title="8 October 2013">8 October 2013</time></span>|<span class="post-author"></span>|<span class="post-labels">
+                   
+                  
+                </span></p>
+              </div>
+            </header>
+            <div class="post-content">
+              <div class="row">
+                <div class="col-sm-12 post-content">
+                  <p>Incorporated provides a great typography, responsive design, author details, semantic markup and more.</p>
+
+<p>You can set customize post covers, and other things directly in the post front matter:</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">layout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">post</span>
+
+<span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Jekyll Incorporated Features</span>
+<span class="l-Scalar-Plain">subtitle</span><span class="p-Indicator">:</span> <span class="s">&quot;What&#39;s</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">box&quot;</span>
+
+<span class="c1"># Setup post cover image in /images/</span>
+<span class="l-Scalar-Plain">cover_image</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">blog-cover.jpg</span>
+
+<span class="l-Scalar-Plain">excerpt</span><span class="p-Indicator">:</span> <span class="s">&quot;Incorporated</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">great</span><span class="nv"> </span><span class="s">typography,</span><span class="nv"> </span><span class="s">responsive</span><span class="nv"> </span><span class="s">design,</span><span class="nv"> </span><span class="s">author</span><span class="nv"> </span><span class="s">details,</span><span class="nv"> </span><span class="s">semantic</span><span class="nv"> </span><span class="s">markup</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">more.&quot;</span>
+
+<span class="c1"># Author details, including Google Plus authorship</span>
+<span class="l-Scalar-Plain">author</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Karri Saarinen</span>
+  <span class="l-Scalar-Plain">twitter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">karrisaarinen</span>
+  <span class="l-Scalar-Plain">gplus</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">100687498195339762535</span> 
+  <span class="l-Scalar-Plain">bio</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Co-founder, Design</span>
+  <span class="l-Scalar-Plain">image</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ks.jpg</span>
+  
+<span class="c1"># Keep it as draft, not published in index.html or feed.xml</span>
+<span class="l-Scalar-Plain">draft</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span></code></pre></div>
+
+<h4 id="configurable--code-snipped-highlighting">Configurable &amp; Code Snipped Highlighting</h4>
+
+<p>/assets/stylesheets/main.scss:</p>
+
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="cm">/* Bodytext font */</span>
+<span class="nv">$font</span><span class="o">:</span> <span class="s2">&quot;Droid Sans&quot;</span><span class="o">,</span> <span class="s2">&quot;Helvetica Neue&quot;</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Arial</span><span class="o">,</span> <span class="no">sans-serif</span><span class="p">;</span>
+
+<span class="cm">/* Font for headings */</span>
+<span class="nv">$fontheadings</span><span class="o">:</span> <span class="s2">&quot;Droid Sans&quot;</span><span class="o">,</span> <span class="s2">&quot;Helvetica Neue&quot;</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Arial</span><span class="o">,</span> <span class="no">sans-serif</span><span class="p">;</span>
+
+<span class="cm">/* Text colors */</span>
+<span class="nv">$text</span><span class="o">:</span> <span class="mh">#21272d</span><span class="p">;</span>
+<span class="nv">$textmuted</span><span class="o">:</span> <span class="mh">#848484</span><span class="p">;</span>
+<span class="nv">$accent</span><span class="o">:</span> <span class="mh">#2077b2</span><span class="p">;</span></code></pre></div>
+
+<p>config.yml:</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">inc</span><span class="p-Indicator">:</span>
+  <span class="c1"># Blog Information</span>
+  <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span>        <span class="s">&quot;Jekyll</span><span class="nv"> </span><span class="s">Incorporated&quot;</span>
+  <span class="l-Scalar-Plain">subtitle</span><span class="p-Indicator">:</span>     <span class="s">&quot;Modern</span><span class="nv"> </span><span class="s">Jekyll</span><span class="nv"> </span><span class="s">based</span><span class="nv"> </span><span class="s">blog</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">companies&quot;</span>
+  <span class="l-Scalar-Plain">cover_image</span><span class="p-Indicator">:</span>  <span class="l-Scalar-Plain">blog-cover.jpg</span>
+  
+  <span class="c1"># Company information</span>
+  <span class="l-Scalar-Plain">company</span><span class="p-Indicator">:</span>      <span class="l-Scalar-Plain">Incorporated</span>
+  <span class="l-Scalar-Plain">url</span><span class="p-Indicator">:</span>          <span class="l-Scalar-Plain">http://incorporated.sendtoinc.com/</span>
+  <span class="l-Scalar-Plain">facebook</span><span class="p-Indicator">:</span>     <span class="l-Scalar-Plain">sendtoinc</span>
+  <span class="l-Scalar-Plain">twitter</span><span class="p-Indicator">:</span>      <span class="l-Scalar-Plain">sendtoinc</span>
+  <span class="l-Scalar-Plain">about_link</span><span class="p-Indicator">:</span>   <span class="l-Scalar-Plain">https://sendtoinc.com/about/</span>
+  
+  <span class="c1"># Product Information</span>
+  <span class="l-Scalar-Plain">product_link</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">http://incorporated.sendtoinc.com/</span>
+  <span class="l-Scalar-Plain">tagline</span><span class="p-Indicator">:</span>      <span class="s">&quot;Get</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">modern</span><span class="nv"> </span><span class="s">blog</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">your</span><span class="nv"> </span><span class="s">company&quot;</span>
+  
+  <span class="c1"># Comments</span>
+  <span class="l-Scalar-Plain">disqus</span><span class="p-Indicator">:</span>
+    <span class="c1"># Eg. &quot;exampleblog&quot; Set to false to disable comments</span>
+    <span class="l-Scalar-Plain">shortname</span><span class="p-Indicator">:</span>  <span class="l-Scalar-Plain">false</span>
+  
+  
+  <span class="c1"># Sharing settings</span>
+  <span class="l-Scalar-Plain">sharing</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">twitter</span><span class="p-Indicator">:</span>    <span class="l-Scalar-Plain">false</span>
+    <span class="l-Scalar-Plain">facebook</span><span class="p-Indicator">:</span>   <span class="l-Scalar-Plain">false</span>
+    <span class="l-Scalar-Plain">gplus</span><span class="p-Indicator">:</span>      <span class="l-Scalar-Plain">false</span>
+    <span class="l-Scalar-Plain">hn</span><span class="p-Indicator">:</span>         <span class="l-Scalar-Plain">false</span>
+    
+  
+ <span class="c1"># Analytics     </span>
+  <span class="l-Scalar-Plain">analytics</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">google</span><span class="p-Indicator">:</span> 
+      <span class="c1"># eg. &#39;UA-123-12&#39;</span>
+      <span class="l-Scalar-Plain">id</span><span class="p-Indicator">:</span>       <span class="l-Scalar-Plain">false</span></code></pre></div>
+
+<p><strong>Zoomable images</strong></p>
+<div class="full zoomable"><img src="/images/incorporated.jpg" /></div>
+
+<p><strong>Awesome quotes</strong>
+&gt; “Effective companies tend to communicate more, their people are curious and they have opinions”</p>
+
+<p>Stay tuned for updates.</p>
+
+                </div>
+              </div>
+            </div>
+          </article>
+          <hr>
+            <div class="post-footer">
+              <div class="row">
+                <div class="col-sm-12">
+                  <nav>
+                    <ul class="pager">
+                      
+                      
+                      <li><a href="/2015/01/17/yildizlararasi.html" title="Yıldızlararası">Sonraki&rarr;</a></li>
+                      
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+
+        </div>
+        <div class="col-sm-4">
+        <aside>
+          <div class="aside-search">
+            <form action="">
+              <div class="left-inner-addon">
+                <i class="fa fa-search"></i>
+                <input type="text" class="form-control" placeholder="Arama">
+              </div>
+            </form>
+          </div>
+          <hr>
+          <div class="aside-posts">
+            <div role="tabpanel">
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#recent" aria-controls="recent" role="tab" data-toggle="tab">En son eklenenler</a></li>
+                <li role="presentation"><a href="#popular" aria-controls="popular" role="tab" data-toggle="tab">En popüler yazılar</a></li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="recent">
+                  <ul class="list-unstyled">
+                  
+                    <li>
+                      <div>
+                        <p><a href="/jekyll/update/2015/06/08/welcome-to-jekyll.html">Welcome to Jekyll!</a></p>
+                        
+                        <p>8.06.2015 &middot; </p>
+                      </div>
+                    </li>
+                    
+                    <li>
+                      <div>
+                        <p><a href="/2015/01/17/yildizlararasi.html">Yıldızlararası</a></p>
+                        
+                        <p>17.01.2015 &middot; Devin Çeşmecioğlu</p>
+                      </div>
+                    </li>
+                    
+                    <li>
+                      <div>
+                        <p><a href="/2013/10/08/incorporated.html">Jekyll Incorporated Features</a></p>
+                        
+                        <p>8.10.2013 &middot; </p>
+                      </div>
+                    </li>
+                    
+                  </ul>
+                 </div>
+                <div role="tabpanel" class="tab-pane fade" id="popular">
+                  Popular articles
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <hr>
+          <div class="aside-labels">
+            <h3>Etiketler</h3>
+            <ul class="list-inline">
+              <li>
+                <a href="#">kozmoloji</a>
+              </li>
+              <li>
+                <a href="#">popüler bilim</a>
+              </li>
+              <li>
+                <a href="#">parçacık fiziği</a>
+              </li>
+              <li>
+                <a href="#">eğitim</a>
+              </li>
+              <li>
+                <a href="#">geometri</a>
+              </li>
+            </ul>
+          </div>
+          <hr>
+          <div class="aside-links">
+            <h3>Bağlantılar</h3>
+            <ul class="list-unstyled">
+              <li>
+                <a href="">IAPS İstanbul</a>
+              </li>
+              <li>
+                <a href="">İTÜ Fizik Haftası</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </aside>
+      </div>
+    </div>
+
+    <hr>
+<footer>
+  <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <ul class="social-media">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="google-plus" href="#"><i class="fa fa-google-plus "></i></a></li>
+              <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 signature">
+            <p>Kozmik Günce | 2015</p>
+          </div>
+        </div>
+      </div>
+</footer>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+
+
+  </body>
+
+</html>
