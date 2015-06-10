@@ -1,0 +1,29 @@
+---
+layout: page
+title: Kozmik Günce Hakkında
+permalink: /hakkinda/
+---
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque praesentium impedit illum sapiente explicabo, itaque perspiciatis reiciendis incidunt ipsam cumque minima quos maiores fugit, obcaecati autem quae dolorem voluptatum accusamus? Odit dolores reiciendis, error modi sed doloremque similique aliquid optio quis in, dolorum consequatur ut omnis, inventore sapiente autem nam.
+
+<h2>Yazarlar</h2>
+
+{% for member in site.data.members %}
+
+{% assign author = site.data.members[member] %}
+
+
+<div class="row author">
+
+	<div class="col-sm-3">
+		<span class="helper"></span><img class="media-object" src="{{ site.base_url }}/assets/site/cem.jpg" alt="...">
+	</div>
+	<div class="col-sm-9">
+		<h4>{{ author.name }}</h4>
+		<i>Syracuse Üniversitesi Fizik Bölümü</i>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore eligendi consectetur asperiores fuga neque consequatur ut non deserunt, soluta dignissimos.</p>
+	</div>
+
+</div>
+
+{% endfor %}
